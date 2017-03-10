@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}
+
+		<h1> Edit Menu Item </h1>
+
+		<form action="{{ url_for('editMenuItem',category_name = category_name, item_name=item_name)}}" method = 'post'>
+
+			<dl>
+				<dt>Name:</dt>
+					<dd><input type ='text' size='30' name='name' placeholder = '{{item.name }}'></dd>
+
+				<dt>Description:</dt>
+					<dd><textarea name = 'description' rows='5' cols='40' placeholder = '{{item.description }}'></textarea></dd>
+
+				<dt>Price:</dt>
+					<dd><input type = 'text' size = '8' name='price' placeholder = '{{item.price}}'></dd>
+
+				<dt>Image:</dt>
+					<dd><input type ='text' size='120' name='image' placeholder = '{{item.image }}'></dd>
+
+    			<dt>Kind:</dt>
+        			<dd><input type="radio" name="kind" id="kind1" value="new" {%if item.kind =='new'%}checked{%endif%}>New</dd>
+        			<dd><input type="radio" name="kind" id="kind2" value="normal" {%if item.kind =='normal'%}checked{%endif%}>Normal</dd>
+        			<dd><input type="radio" name="kind" id="kind3" value="sale" {%if item.kind =='sale'%}checked{%endif%}>Sale</dd>
+
+			</dl>
+
+			<input class="button" type='submit' value='Edit'>
+
+			<a href = '{{url_for('seccategoryitemMenu', category_name = category_name)}}'> Cancel </a>
+
+		</form>
+{% endblock %}

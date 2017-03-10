@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+    	    <meta name="viewport" content="width=device-width,initial-scale=1">
+    	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	    <title>Catalog App</title>
+    	    <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500" rel="stylesheet" type="text/css">
+    	    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='catalog.css') }}">
+    	    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='responsive.css') }}">
+	</head>
+	<body>
+
+
+            <header class="header">
+                <div class="header__inner">
+
+                    {%if not email_user%}
+                        <a class="header__title" href="{{url_for('catalogMenu')}}">Catalog App</a>
+                    {% else %}
+                        <a class="header__title" href="{{url_for('seccatalogMenu')}}">Catalog App</a>
+                    {% endif %}
+
+                    <div class="user_name">
+                        <p>{{email_user}}<p>
+                    </div>
+
+                    <div class="login_logout_button">
+
+                        {%if not email_user%}
+                            <a class="button" href="{{url_for('showLogin')}}">Login</a>
+                        {% else %}
+                            <a class="button" href="{{url_for('disconnect')}}">Logout</a>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+             </header>
+
+
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

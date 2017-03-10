@@ -1,0 +1,2 @@
+ssh grader@138.68.273.243 -i ~/.ssh/grader -p 2200
+Enter passphrase for key '/c/Users/THANH/.ssh/grader':choxutimeo

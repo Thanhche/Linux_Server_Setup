@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+    <h3>New Menu Item</h3>
+
+    <div class = 'pane'>
+        <form action='{{ url_for('newMenuItem', category_name=category_name)}}' method = 'post'>
+
+            <dl>
+	           <dt>Name:</dt>
+		          <dd><input type ='text' size='30' name='name' required></dd>
+
+	           <dt>Description:</dt>
+		          <dd><textarea name = 'description' rows='5' cols='40' required></textarea></dd>
+
+               <dt>Price:</dt>
+                  <dd><input type = 'text' size = '8' name='price' required></dd>
+
+	           <dt>Image:</dt>
+                  <dd><textarea name = 'image' rows='5' cols='40' required></textarea></dd>
+
+               <dt>Kind:</dt>
+                  <dd><input type ='radio' name='kind' value='new' checked>Latest</dd>
+                  <dd><input type ='radio' name='kind' value='normal'>Normal</dd>
+                  <dd><input type ='radio' name='kind' value='sale'>Sale</dd>
+            </dl>
+
+            <input class="button" type='submit' value='Create'>
+
+            <a href = '{{url_for('seccategoryitemMenu', category_name=category_name)}}'> Cancel </a>
+
+        </form>
+    </div>
+{% endblock %}

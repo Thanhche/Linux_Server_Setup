@@ -1,0 +1,262 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 0.8em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  min-height: 8%;
+  background-color: #F5F5DC;
+  height: 60px;
+}
+
+.header__inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__title {
+  position: absolute;
+  left: 5em;
+  top: 1em;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #4682B4;
+}
+
+.user_name {
+  position: absolute;
+  right: 3em;
+  top: 2em;
+  color: green;
+  font-size: 0.9em;
+}
+
+.login_logout_button a {
+  position: absolute;
+  right: 3em;
+  top: 1em;
+  font-size: 0.9em;
+  color: black;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.25px;
+  border-radius: 2px;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f2f2f2;
+}
+
+
+
+/*
+ *
+ * main_body
+ *
+ */
+
+
+/*
+ * category_box
+ */
+
+
+ .category_box {
+  width: 20%;
+  float: left;
+  height: auto;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 200%;
+}
+
+.category_title{
+    font-weight: 400;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: black;
+}
+
+ul.category_item {
+
+  line-height: 150%;
+  list-style-type: none;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+/*
+ * product_box
+ */
+
+ .product_box {
+    width: 80%;
+    float: right;
+    display: block;
+    text-decoration: none;
+}
+
+.product_title {
+    color: black;
+    font-weight: 400;
+    margin-top: 0.5em;
+    font-size: 1em;
+}
+
+/* description page */
+div.description_item {
+    color: blue;
+    width: 300px;
+    border: 1px solid #777;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+/* items */
+
+div.item_image {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 150px;
+    margin-bottom: 6px;
+}
+
+div.item_image:hover {
+    border: 1px solid #777;
+}
+
+img {
+    max-width: 65px;
+    max-height: 65px;
+    margin-top: 4px;
+}
+
+div.item_name{
+    font-size: 0.8em;
+    color:  #6495ED;
+    padding:6px;
+}
+
+div.item_price{
+    font-size: 0.8em;
+    color: red;
+    padding:6px;
+}
+
+div.space {
+    height: 10px;
+}
+
+div.button a {
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: black;
+    border-style: solid;
+    border-color: gray;
+    border-width: 0.25px;
+    border-radius: 2px;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #f2f2f2;
+}
+
+div.edit_delete a {
+    position: relative;
+    top: 135px;
+    left: -2px;
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: black;
+    border-style: solid;
+    border-color: gray;
+    border-width: 0.25px;
+    border-radius: 2px;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #f2f2f2;
+}
+
+/* latest_item */
+
+ul.latest_item {
+  /*line-height: 150%;*/
+    list-style-type: none;
+    text-align: left;
+    font-size: 0.9em;
+    color:  #6495ED;
+}
+
+/* flash */
+
+.flash {
+    background-color: #98FB98;
+    width:100%;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.flash li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.button:hover {
+   color:red;
+}
+
+.tooltipppp {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    color: gray;
+    text-align: left;
+    border-radius: 3px;
+    padding: 3px 0;
+    font-size: 0.7em;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 10;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

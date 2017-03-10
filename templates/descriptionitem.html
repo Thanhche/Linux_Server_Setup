@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+
+    <h4 class="category_title">{{menuItem.name}}</h4>
+    <img src="{{menuItem.image}}" alt="{{menuItem.image}}">
+    <h4 class="category_title">{{menuItem.price}}</h4>    
+
+    <div class="description_item">
+        <p>{{menuItem.description}}</p>
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <button class="button" onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+{% endblock %}
